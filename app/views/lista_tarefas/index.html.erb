@@ -1,3 +1,5 @@
+<%# app/views/lista_tarefas/index.html.erb %>
+
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Lista de Tarefas" %>
@@ -8,10 +10,12 @@
 
 <div id="lista_tarefas">
   <% @lista_tarefas.each do |lista_tarefa| %>
-    <%= render lista_tarefa %>
-    <p>
-      <%= link_to "Exibir", lista_tarefa %>
-    </p>
-  <% end %>
+    <div style="margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <h2><%= link_to lista_tarefa.tarefas, lista_tarefa %></h2>
+      <p>
+        <%= link_to "Editar", edit_lista_tarefa_path(lista_tarefa) %>
+        <%= button_to "Excluir", lista_tarefa, method: :delete %>
+      </p>
+    </div>
+  <% end %> 
 </div>
-
