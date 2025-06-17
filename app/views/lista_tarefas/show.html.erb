@@ -1,13 +1,12 @@
-<p style="color: green"><%= notice %></p>
 
-<div style="display: flex; justify-content: space-between; ">
-  <%= link_to "Voltar", request.referer || lista_tarefas_path %>
-  <%= link_to "Nova Tarefa", new_lista_tarefa_path %>
+<div style="display: flex; justify-content: space-between; margin-top: 2rem; ">
+<%= link_to "Voltar para Lista de Tarefas", lista_tarefas_path %>
+<%= link_to "Nova Tarefa", new_lista_tarefa_path %>
 </div>
 
 
 <div style="display: grid; align-items: center; justify-content: center; margin-bottom: 10px; margin-top: 2rem; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-  <%= render @lista_tarefa %>
+<%= render @lista_tarefa %>
 
   
   <%= link_to "Editar Tarefa", edit_lista_tarefa_path(@lista_tarefa) %>
@@ -15,4 +14,7 @@
 
   <%= button_to "Excluir Tarefa", @lista_tarefa, method: :delete %>
   
-</div>
+  </div>
+
+  </br>
+  <p style="color: green"><%= notice %></p>
