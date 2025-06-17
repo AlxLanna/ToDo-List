@@ -29,3 +29,12 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      # Textos genéricos para criar e atualizar qualquer modelo
+      create: "Criar %{model}" 
+      update: "Atualizar %{model}" 
+
+      lista_tarefa: # O nome da chave deve ser o nome do modelo em snake_case (singular)
+        create: "Criar Nova Tarefa"   # Texto para o botão de criação de ListaTarefa
+        update: "Atualizar Tarefa" 

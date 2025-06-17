@@ -4,7 +4,7 @@
 <%= render @lista_tarefa %>
 
 <div>
-  <%= button_to "Editar Tarefa", edit_lista_tarefa_path(@lista_tarefa) %>
+  <%= link_to "Editar Tarefa", edit_lista_tarefa_path(@lista_tarefa) %>
   
   <%= button_to "Excluir Tarefa", @lista_tarefa, method: :delete %>
 </div>
