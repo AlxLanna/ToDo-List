@@ -1,0 +1,37 @@
+<%= form_with(model: lista_tarefa) do |form| %>
+  <% if lista_tarefa.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(lista_tarefa.errors.count, "error") %> prohibited this lista_tarefa from being saved:</h2>
+
+      <ul>
+        <% lista_tarefa.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :tarefas, style: "display: block" %>
+    <%= form.text_field :tarefas %>
+  </div>
+
+  <div>
+    <%= form.label :descrição, style: "display: block" %>
+    <%= form.text_field :descrição %>
+  </div>
+
+  <div>
+    <%= form.label :entrega, style: "display: block" %>
+    <%= form.date_field :entrega %>
+  </div>
+
+  <div>
+    <%= form.label :concluído, style: "display: block" %>
+    <%= form.checkbox :concluído %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

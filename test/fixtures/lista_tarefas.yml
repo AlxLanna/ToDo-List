@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tarefas: MyString
+  descrição: MyString
+  entrega: 2025-06-17
+  concluído: false
+
+two:
+  tarefas: MyString
+  descrição: MyString
+  entrega: 2025-06-17
+  concluído: false
