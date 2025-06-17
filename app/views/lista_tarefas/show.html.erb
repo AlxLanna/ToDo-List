@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= link_to "Voltar", request.referer || lista_tarefas_path %>
-
+<div style="display: flex; justify-content: space-between; ">
+  <%= link_to "Voltar", request.referer || lista_tarefas_path %>
+  <%= link_to "Nova Tarefa", new_lista_tarefa_path %>
+</div>
 
 
 <div style="display: grid; align-items: center; justify-content: center; margin-bottom: 10px; margin-top: 2rem; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
