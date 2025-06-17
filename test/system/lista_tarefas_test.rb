@@ -7,7 +7,7 @@ class ListaTarefasTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit lista_tarefas_url
-    assert_selector "h1", text: "Lista tarefas"
+    assert_selector "h1", text: "Lista de Tarefas"
   end
 
   test "should create lista tarefa" do
