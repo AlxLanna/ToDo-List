@@ -32,6 +32,10 @@
   </div>
 
   <div>
-    <%= form.submit "Criar nova Tarefa"%>
+    <% if lista_tarefa.new_record? %>
+      <%= form.submit "Criar nova Tarefa" %>
+    <% else %>
+      <%= form.submit "Atualizar Tarefa" %>
+    <% end %>
   </div>
 <% end %>
