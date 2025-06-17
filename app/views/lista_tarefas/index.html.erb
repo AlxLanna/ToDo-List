@@ -1,16 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Lista tarefas" %>
+<% content_for :title, "Lista de Tarefas" %>
 
-<h1>Lista tarefas</h1>
+<h1>Lista de Tarefas</h1>
+
+<%= link_to "Nova Tarefa", new_lista_tarefa_path %>
 
 <div id="lista_tarefas">
   <% @lista_tarefas.each do |lista_tarefa| %>
     <%= render lista_tarefa %>
     <p>
-      <%= link_to "Show this lista tarefa", lista_tarefa %>
+      <%= link_to "Exibir", lista_tarefa %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New lista tarefa", new_lista_tarefa_path %>

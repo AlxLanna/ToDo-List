@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
+<%= link_to "Voltar", lista_tarefas_path %>
 <%= render @lista_tarefa %>
 
 <div>
-  <%= link_to "Edit this lista tarefa", edit_lista_tarefa_path(@lista_tarefa) %> |
-  <%= link_to "Back to lista tarefas", lista_tarefas_path %>
-
-  <%= button_to "Destroy this lista tarefa", @lista_tarefa, method: :delete %>
+  <%= button_to "Editar Tarefa", edit_lista_tarefa_path(@lista_tarefa) %>
+  
+  <%= button_to "Excluir Tarefa", @lista_tarefa, method: :delete %>
 </div>
